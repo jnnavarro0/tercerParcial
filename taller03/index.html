@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mi primer HTML con PHP</title>
+</head>
+
+<body>
+	<script>
+		function factorial() {
+			var total = 1;
+			var texto = document.getElementById("Respuesta");
+			var num = document.getElementById("TEXTO").value;
+			for (var i = 1; i <= num; i++) {
+				total = total * i;
+			}
+			texto.innerHTML = "El factorial de " + num + " es " + total;
+		}
+	</script>
+
+	<p>Codigo estatico con HTML</p></br>
+	<form enctype="multipart/form-data" id="form1" action="" method="">
+		<fieldset>
+			<legend>Datos Personales</legend>
+			<p><label>Numero:</label>
+				<input type="number" id="TEXTO" name="txtNum" min="1" max="10" placeholder="0" required>
+			</p>
+		</fieldset>
+		<p>
+			<button type="button" onclick="return factorial()">CALCULAR</button>
+			<!--<button type="submit" id="BOTON" name="BotonCalcular">CALCULAR</button>-->
+		</p>
+	</form>
+
+	<div id="Respuesta"></div>
+
+
+	<!--<script src="js/funcionJS.js"></script>-->
+</body>
+
+</html>

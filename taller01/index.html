@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+
+	<title></title>
+</head>
+
+<!--
+1. Usuario ingresa  la caja de texto la cedula. Utilizando en la caja de texto que sea mas de 10
+Mediante el jqury la cadena solo esté formada por dígitos
+2.Caracteres alfanumérico. En caso de que exista un error despegar una alerta
+3. Utilizar el boton berificar, el mismo que ejecuta un script de php
+4. El scrip´t de php "verificar.php" utiliza el método post para obtener la cadena de 
+texto ingresada y ejecuta el argoritmo de verificación de la cedula.
+-->
+
+<body>
+
+
+	<br><br>
+	<section class="container">
+
+		<form class="form-group" action="calcular.php" method="post">
+			<!-- Número entre 10 y 50, de 5 en 5. Valor por defecto: 25 -->
+			Numero: <input type="number" name="txtNum" id="Boton" value="0" min="0" max="10" step="1" /><br><br>
+
+			<button type="submit" class="btn btn-primary">Boton Calular</button>
+
+
+			<br><br>
+
+		</form>
+	</section>
+
+	<script type="text/javascript">
+
+		function factorialJs(ingresoNumero) {
+			var total = 1;
+			for (i = 1; i <= n; i++) {
+				total = total * i;
+			}
+			window.alert('El factorial de ' + ingresoNumero + ' es: ' + total);
+		}
+
+	</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

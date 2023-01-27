@@ -1,0 +1,39 @@
+<!--
+1. Usuario ingresa  la caja de texto la cedula. Utilizando en la caja de texto que sea mas de 10
+Mediante el jqury la cadena solo esté formada por dígitos
+2.Caracteres alfanumérico. En caso de que exista un error despegar una alerta
+3. Utilizar el boton berificar, el mismo que ejecuta un script de php
+4. El scrip´t de php "verificar.php" utiliza el método post para obtener la cadena de 
+texto ingresada y ejecuta el argoritmo de verificación de la cedula.
+-->
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Taller 04</title>
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+
+    <body>
+        <center>
+            <h1>VERIFICADOR</h1>
+            <form method="post" action="./verificar.php" id="formularioCedula">
+                <label for="cedula">Ingrese su numero de cédula: </label>
+                <input type="text" name="cedula" id="cedula" placeholder="Ej.
+                    1715764519"><br>
+                <span class="errorCedula" id="vacio">Este campo es obligatorio.</span>
+                <span class="errorCedula" id="verificarCantidad">Cédula no cuenta con 10 digitos numéricos</span><br><br>
+                <button type="submit" id="enviar">Verificar</button>
+            </form>
+            <br>
+            <div id="demo"></div>
+        </center>
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+
+</html>
