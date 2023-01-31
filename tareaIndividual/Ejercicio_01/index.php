@@ -16,6 +16,7 @@
 
 <body>
     <h1><?php echo $descripcion; ?></h1>
+    <button onclick="location.href='../index.html'">Regresar a Inicio</button>
 </body>
 
 </html>

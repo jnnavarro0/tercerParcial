@@ -36,6 +36,8 @@ $total = $subtotal - $descuento;
     <p>Subtotal: <?php echo $subtotal; ?></p>
     <p>Descuento: <?php echo $descuento; ?></p>
     <p>Total: <?php echo $total; ?></p>
+    <br>
+    <button onclick="location.href='../index.html'">Regresar a Inicio</button>
 </body>
 
 </html>

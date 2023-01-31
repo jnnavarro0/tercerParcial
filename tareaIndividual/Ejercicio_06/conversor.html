@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/style5.css">
+</head>
+
+<body>
+    <form action="procesar.php" method="post">
+        <h1>Conversor de monedas</h1>
+        <label for="">Cantidad en soles: </label>
+        <input type="text" name="soles">
+        <label for="">Moneda: </label>
+        <select name="moneda" id="">
+            <option value="usd">Dólar</option>
+            <option value="euro">Euro</option>
+        </select>
+        <input type="submit" value="Calcular">
+    </form>
+    <br>
+    <center><button onclick="location.href='../index.html'">Regresar a Inicio</button></center>
+</body>
+
+</html>

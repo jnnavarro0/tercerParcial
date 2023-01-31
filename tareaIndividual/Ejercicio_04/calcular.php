@@ -21,11 +21,13 @@ $multiplicador = 1;
 <body>
     <h1>Tabla del <?php echo $tabla ?></h1>
     <?php
-    while($multiplicador <= $nMaximo){
+    while ($multiplicador <= $nMaximo) {
         echo "<p>{$tabla} * {$multiplicador} = " . $tabla * $multiplicador . "</p>";
         $multiplicador++;
     }
     ?>
+    <br>
+    <button onclick="location.href='../index.html'">Regresar a Inicio</button>
 </body>
 
 </html>

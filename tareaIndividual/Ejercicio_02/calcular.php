@@ -22,6 +22,8 @@
     <p>Precio: <?php echo $precio; ?></p>
     <p>Cantidad: <?php echo $cantidad; ?></p>
     <p>Total: <?php echo $total; ?></p>
+    <br>
+    <button onclick="location.href='../index.html'">Regresar a Inicio</button>
 </body>
 
 </html>

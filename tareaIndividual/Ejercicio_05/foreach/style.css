@@ -1,0 +1,25 @@
+body {
+    font-family: monospace;
+    font-size: 1.2em;
+}
+
+.contenedor {
+    margin: auto;
+    width: 200px;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    margin: 0;
+    background: chocolate;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+p:nth-child(even) {
+    background: orange;
+}

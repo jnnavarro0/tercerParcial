@@ -24,6 +24,8 @@ $nMaximo = $_POST['maximo'];
         echo "<p>{$tabla} * {$i} = " . $tabla * $i . "</p>";
     }
     ?>
+    <br>
+    <button onclick="location.href='../../index.html'">Regresar a Inicio</button>
 </body>
 
 </html>
