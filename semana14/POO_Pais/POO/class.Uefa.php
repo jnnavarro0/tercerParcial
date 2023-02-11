@@ -1,18 +1,21 @@
 
 <?php
-class Fifa extends Pais
+class Uefa extends Pais
 {
 
-	private $año;      // LA CARA
-	private $subcampeon;   // Numero total de ciudades que tiene un pais
+	private $campeon;      // LA CARA
+    private $subcampeon;      // LA CARA
+	private $anio;   // Numero total de ciudades que tiene un pais
 
-//$contienente = new()
+
 	// CONSTRUCTOR
-	function __construct($año, $subcampeon)
+	function __construct($camp, $sub, $an)
 	{
 		parent::__construct($NomPais, count($data));
 		$tope = count($data);
-		$this->ciudades = $data;
+		$this->campeon = $camp;
+        $this->subcampeon = $sub;
+        $this->anio = $an;
 	}
 
 	// IMPLEMENTAR METODOS	
