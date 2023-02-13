@@ -73,7 +73,7 @@
 	$objArgentina = new Pais($titulo[2], $ciudadesArgentina);
 	$objColombia = new Pais($titulo[3], $ciudadesColombia);
 
-
+	$objECU->
 	$arrayPaises = [$objECU, $objUSA, $objArgentina, $objColombia];
 
 	for ($i = 0; $i < count($arrayPaises); $i++) {
