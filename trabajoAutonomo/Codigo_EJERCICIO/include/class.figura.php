@@ -1,4 +1,14 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+	<?php
 	abstract class figura{
 		private $tipo;
 		private $a; //area
@@ -12,15 +22,16 @@
 		
 		public static function get_form(){
 			$html = '
-			<form name="figuras" method="POST" action="" >
-			<table border=0 align="center">
-				<tr>
-					<th colspan="2">INGRESO DATOS DE LA FIGURA</th>
+			<p><br><br></p>
+			<form name="figuras" method="POST" action="" class="container">
+			<table border=1 align="center" class="table table-striped">
+				<tr class="table-success">
+					<th colspan="2"><center>INGRESO DATOS DE LA FIGURA</center></th>
 				</tr>
 				<tr>
 					<td>Tipo: </td>
 					<td>
-						<select name="tipo" OnChange=>
+						<select class="form-select" aria-label="Default select example" name="tipo" OnChange="validar(this.value)">
 							<option value="sel">Seleccione...</option>
 							<option value="cuadrado">Cuadrado</option>
 							<option value="rectangulo">Rectángulo</option>
@@ -30,21 +41,20 @@
 				</tr>
 				<tr>
 					<td>Lado 1:</td>
-					<td><input type="text" name="lado_1"size="4" disabled></td>
+					<td><input class="form-control" type="text" name="lado_1" id="lado_1"size="4" disabled></td>
 				</tr>
 				<tr>
 					<td>Lado 2:</td>
-					<td><input type="text" name="lado_2"size="4" disabled></td>
+					<td><input class="form-control" type="text" name="lado_2" id="lado_2"size="4" disabled></td>
 				</tr>
 				<tr>
 					<td>Lado 3:</td>
-					<td><input type="text" name="lado_3"size="4" disabled></td>
+					<td><input class="form-control" type="text" name="lado_3" id="lado_3"size="4" disabled></td>
 				</tr>							
-				<tr>
-					<th colspan="2"><input type="submit" name="calcular" value="Calcular"></th>
-				</tr>
 			</table>
-			</form>';
+			</form>
+			<script src="./script/script.js" type="text/javascript"></script>
+			';
 			return $html;
 		}
 		
@@ -54,3 +64,9 @@
 	    public abstract function GetTipo();
 	}
 ?>
+</body>
+</html>
+
+
+
+

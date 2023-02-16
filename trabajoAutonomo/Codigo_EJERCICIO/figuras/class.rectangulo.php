@@ -1,28 +1,33 @@
 <?php
 class rectangulo extends figura implements formulas{
     
-    private $lados;
+    private $base;
+    private $altura;
 
-    function __construct($tp, $a, $p, $lds){
-        parent::__construct($tp, $a, $p);
-        $this->lados = $lds;
+    function __construct($base, $altura) {
+        $this->base = $base;
+        $this->altura = $altura;
+        $area = $this->area();
+        $perimetro = $this->perimetro();
+        parent::__construct('Cuadrado', $area, $perimetro);
     }
 
-    public function GetArea(){
-        return pow($this->lados, 2);
+    public function GetArea() {
+        return $this->area();
     }
-    public function GetPerimetro(){
-        return $this->lados * 4;
+
+    public function GetPerimetro() {
+        return $this->perimetro();
     }
+    
     public function GetTipo(){
-        return "Cuadrado";
+        return "Resctangulo";
     }
 
     public function area(){
-
+        return $this->base * $this->altura;
     }
     public function perimetro(){
-
+        return 2 * ($this->base + $this->altura);
     }
 }
-?>

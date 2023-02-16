@@ -18,10 +18,9 @@
 		include("figuras/class.rectangulo.php");
 		include("figuras/class.triangulo.php");
 			
-		$objCuadrado = new cuadrado();
-		$objRectangulo = new rectangulo();
-		$objTriangulo = new triangulo();
-
+		$objCuadrado = new cuadrado(4);
+		$objRectangulo = new rectangulo(2, 4);
+		$objTriangulo = new triangulo(3, 2, 5);
 		
 		echo figura::get_form();
 		
