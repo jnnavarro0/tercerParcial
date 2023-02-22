@@ -19,7 +19,7 @@
         private $Carrera;    // Matriz de datos
         private $titulo;
 
-        function __construct($Nom, $Num, $Carrera, $titulo)
+        function __construct($Nom, $Num, $titulo, $Carrera)
         {
             parent::__construct($Nom, count($Num));
             $this->Carrera = $Carrera;
@@ -55,20 +55,18 @@
             $niveles = [];
             $cont = 0;
 
-            echo '<br><h1 class="text-center">Carrera Ingeniería ' . $this->GetCarrera() . '</h1><br>';
-
-            foreach ($this->Gettitulo() as $indice => $materias) {
+            foreach ($this->GetCarrera() as $indice => $materias) {
                 $niveles[$cont] = $indice;
                 $cont++;
             }
 
             $cont = 0;
 
-            foreach ($this->Gettitulo() as $indice => $materias) {
+            foreach ($this->GetCarrera() as $indice => $materias) {
                 if ($indice == $niveles[$cont]) {
 
                     $table = '<div class="container"><center><table class="table table-bordered table-striped"><tr><td colspan=' . 
-                    count($materias) .' class="table-success"><center><b>' . $indice . ' de ' . $this->GetCarrera() . 
+                    count($materias) .' class="table-success"><center><b>' . $indice . ' de ' . $this->Gettitulo() . 
                     '</b></center></td></tr><tr>';
 
                     foreach ($materias as $carrera => $materia)
