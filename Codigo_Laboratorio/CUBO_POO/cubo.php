@@ -87,9 +87,44 @@
 		)
 	);
 
-	$mecatronica = array();
-	$civil = array();
-	$biotecnologia = array();
+	$mecatronica = array(
+		'I NIVEL' => array(
+
+		),
+
+		'II NIVEL' => array(
+
+		),
+
+		'III NIVEL' => array(
+
+		)
+	);
+	$civil = array(
+		'I NIVEL' => array(
+
+		),
+
+		'II NIVEL' => array(
+
+		),
+
+		'III NIVEL' => array(
+
+		)
+	);
+	$biotecnologia = array(
+		'I NIVEL' => array(
+
+		),
+
+		'II NIVEL' => array(
+
+		),
+
+		'III NIVEL' => array(
+		)
+	);
 	?>
 
 </body>

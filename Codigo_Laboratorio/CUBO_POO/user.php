@@ -13,8 +13,10 @@
 include_once("./cubo.php");
 global $departamento;
 $cont = 0;
-$niveles = ['Nivel I', 'Nivel II', 'Nivel III', 'Todos'];
+$niveles = ['I', 'II', 'III'];
 global $carreras;
+echo '<br><a class="btn btn-primary" href="../index.html">Regresar</a>';
+
 ?>
 
 <body>
@@ -32,11 +34,12 @@ global $carreras;
                 } ?>
             </select>
             <br>
+            Niveles:
             <?php foreach ($niveles as $nivel) {
                 echo '
                 <div class="form-check">
-                    <label><input class="form-check-input" type="radio" name="nivel" value="' . $nivel . '" require>' .
-                    $nivel .
+                    <label><input class="form-check-input" type="checkbox" name="' . $nivel . '" require>' .
+                    $nivel . ' NIVEL' .
                 '</label></div>';
             } ?>
             <br>

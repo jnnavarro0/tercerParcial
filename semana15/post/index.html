@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Formulario</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+
+<body>
+	<form name="vehiculo"  method="POST" action="procesa.php" enctype="multipart/form-data">
+		<table align="center" border="0">
+			<tr>
+				<th colspan="2">INGRESO DE DATOS</th>
+			</tr>
+			<tr>
+				<td>Placa: </td>
+				<td><input type="text" name="placa" size="7"></td>
+			</tr>
+			<tr>
+				<td>Marca: </td>
+				<td>
+					<select name="marca">
+						<option value="1">Chévrolet</option>
+						<option value="2">Ford</option>
+						<option value="3">Fiat</option>
+						<option value="4">Audi</option>
+						<option value="5">Toyota</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Combustible:</td>
+				<td>
+					<table border="0" align="center">
+						<tr>
+							<td>Gasolina: </td>
+							<td><input type="radio" name="combustible" value="Gasolina" checked></td>
+						</tr>
+						<tr>
+							<td>Diesel: </td>
+							<td><input type="radio" name="combustible" value="Diesel"></td>
+						</tr>						
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>Accesorios: </td>
+				<td>
+					<table border="0" align="center">
+						<tr>
+							<td>Radio: </td>
+							<td><input type="checkbox" name="radio"></td>
+						</tr>
+						<tr>
+							<td>Aros: </td>
+							<td><input type="checkbox" name="aros"></td>
+						</tr>						
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>Foto: </td>
+				<td><input type="file" name="foto"></td>
+			</tr>
+			<tr>
+				<td>Comentarios: </td>
+				<td><textarea name="comentarios" rows="5" cols="30"></textarea></td>
+			</tr>
+			<tr>
+				<th colspan="2"><input type="submit" name="enviar" value="ENVIAR"></th>
+			</tr>
+		</table>	
+	</form>
+</body>
+</html>

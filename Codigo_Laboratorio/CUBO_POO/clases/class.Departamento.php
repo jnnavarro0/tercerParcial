@@ -18,12 +18,14 @@
     {
         private $Carrera;    // Matriz de datos
         private $titulo;
+        private $numnivel;
 
-        function __construct($Nom, $Num, $titulo, $Carrera)
+        function __construct($Nom, $Num, $titulo, $Carrera, $numnivel)
         {
             parent::__construct($Nom, count($Num));
             $this->Carrera = $Carrera;
             $this->titulo = $titulo;
+            $this->numnivel = $numnivel;
         }
 
         public function GetCarrera()
@@ -36,13 +38,18 @@
             return $this->titulo;
         }
 
+        public function Getnumnivel()
+        {
+            return $this->numnivel;
+        }
+
 
         public function CalcularMaxColum($cara)
         {
             $maxColum = null;
-            foreach ($cara as $prov => $arreglo) {
+            foreach ($cara as $arreglo) {
                 // $numProv = count($data[$prov]);
-                $tam = count($cara[$prov]);
+                $tam = count($arreglo);
                 $maxColum = ($maxColum >= $tam) ? $maxColum : $tam;
             }
 
@@ -52,44 +59,27 @@
 
         public function ImprimirNivel()
         {
-            $niveles = [];
-            $cont = 0;
 
-            foreach ($this->GetCarrera() as $indice => $materias) {
-                $niveles[$cont] = $indice;
-                $cont++;
+            $table = '<div class="container"><center><table class="table table-bordered table-striped"><tr><td colspan=' .
+                count($this->GetCarrera()) . ' class="table-success"><center><b>  '. $this->Getnumnivel() . ' NIVEL de ' . $this->Gettitulo() .
+                '</b></center></td></tr>';
+
+            foreach ($this->GetCarrera() as $indices => $departamentos)
+                $table .= '<th class="table-secondary">' . $indices . '</th>';
+
+            $table .= '</tr>';
+
+
+            for ($i = 0; $i < $this->CalcularMaxColum($this->GetCarrera()); $i++) {
+                $table .= '<tr>';
+                foreach ($this->GetCarrera() as $materias)
+                    $table .= (isset($materias[$i])) ? '<td>' . $materias[$i] . '</td>' : '<td></td>';
+
+                $table .= '</tr>';
             }
 
-            $cont = 0;
-
-            foreach ($this->GetCarrera() as $indice => $materias) {
-                if ($indice == $niveles[$cont]) {
-
-                    $table = '<div class="container"><center><table class="table table-bordered table-striped"><tr><td colspan=' . 
-                    count($materias) .' class="table-success"><center><b>' . $indice . ' de ' . $this->Gettitulo() . 
-                    '</b></center></td></tr><tr>';
-
-                    foreach ($materias as $carrera => $materia)
-                        $table .= '<th class="table-secondary">' . $carrera . '</th>';
-
-                    $table .= '</tr>';
-
-                    for ($i = 0; $i < $this->CalcularMaxColum($materias); $i++) {
-
-                        $table .= '<tr>';
-
-                        foreach ($materias as $carrera => $materia)
-                            $table .= (isset($materia[$i])) ? '<td>' . $materia[$i] . '</td>' : '<td></td>';
-
-                        $table .= '</tr>';
-                    }
-
-                    $table .= '</table></center></div>';
-                }
-
-                echo '<br>' . $table . '<br><br>';
-                $cont++;
-            }
+            $table .= '</table></center></div>';
+            echo '<br>' . $table . '<br><br>';
         }
     }
     ?>
